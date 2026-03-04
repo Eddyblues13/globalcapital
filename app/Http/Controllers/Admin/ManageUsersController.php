@@ -394,6 +394,7 @@ class ManageUsersController extends Controller
                 'country' => $request['country'],
                 'address' => $request['address'],
                 'limit' => $request['limit'],
+                'is_subscribed' => $request['is_subscribed'],
 
             ]);
 

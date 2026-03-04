@@ -52,6 +52,8 @@ class AppSettingsController extends Controller
                 'code1message'=> $request->code1message,
                 'code2message'=> $request->code2message,
                 'code3message'=> $request->code3message,
+                'subscribe_status' => $request->subscribe_status,
+                'subscribe_message' => $request->subscribe_message,
                 'otp'=>$request->otp,
             ]);
 

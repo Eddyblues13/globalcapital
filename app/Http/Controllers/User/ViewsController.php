@@ -130,6 +130,11 @@ public function localtransfer()
 public function code1()
 
 {
+    $settings = Settings::where('id', 1)->first();
+    if($settings->subscribe_status == 1 && auth()->user()->is_subscribed == 0){
+        return redirect()->route('subscribeNotice');
+    }
+
     if(auth::user()->transferaction==1){
        return back();
     }
@@ -141,6 +146,11 @@ public function code1()
 //return code2 account form view
 public function code2()
 {
+    $settings = Settings::where('id', 1)->first();
+    if($settings->subscribe_status == 1 && auth()->user()->is_subscribed == 0){
+        return redirect()->route('subscribeNotice');
+    }
+
      if(auth::user()->transferaction==1){
        return back();
     }
@@ -153,6 +163,11 @@ public function code2()
 //return code2 account form view
 public function code3()
 {
+    $settings = Settings::where('id', 1)->first();
+    if($settings->subscribe_status == 1 && auth()->user()->is_subscribed == 0){
+        return redirect()->route('subscribeNotice');
+    }
+
      if(auth::user()->transferaction==1){
        return back();
     }

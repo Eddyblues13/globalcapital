@@ -322,6 +322,14 @@
                     </select>
                     </div>
                     
+                     <div class="form-group col-md-12">
+                        <h6 class="text-{{ $text }}">Transfer Subscription</h6>
+                        <select class="form-control text-{{ $text }}" name="is_subscribed" required>
+                            <option value="1" {{ $user->is_subscribed == 1 ? 'selected' : '' }}>Subscribed</option>
+                            <option value="0" {{ $user->is_subscribed == 0 ? 'selected' : '' }}>Not Subscribed</option>
+                        </select>
+                    </div>
+                    
                      <div class="form-group">
                         <h6 class="text-{{ $text }}">Account Limit ({{$settings->currency}}) </h6>
                         <input type="number" class="form-control  text-{{ $text }}"

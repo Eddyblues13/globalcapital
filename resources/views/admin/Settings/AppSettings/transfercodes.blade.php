@@ -25,11 +25,11 @@
                                   <h5>  <label for="exampleInputEmail1">Code 3</label></h5>
                                     <input class="form-control" type="text"  name="code3" value="{{$settings->code3}}"  placeholder="Enter code3 name">
                                 </div>
-                                  
-                                
-                                 
-                                
-                                
+                                <div class="form-group col-md-12 mb-3">
+                                  <h5>  <label for="exampleInputEmail1">Transfer Subscription Message</label></h5>
+                                  <textarea name="subscribe_message" class="form-control" rows="2" placeholder="Message to show if user is not subscribed.">{{ $settings->subscribe_message }}</textarea>
+                                  <small class="text-{{ $text }}">This message will be displayed warning users to subscribe before they can enter a transfer code.</small>
+                                </div>
                                  </div>
                                  <div class="row">
                                     <div class="form-group col-md-4 mb-3">
@@ -42,16 +42,27 @@
                                       <textarea name="code2message" class="form-control " rows="2">{{ $settings->code2message }}</textarea>
                                       <small class="text-{{ $text }}">This message will be displayed to users on if code2 is on international transfer</small>
                                     </div>
-                                      <div class="form-group col-md-4 mb-3">
+                                     <div class="form-group col-md-4 mb-3">
                                       <h5>  <label for="exampleInputEmail1">Code3 message</label></h5>
                                       <textarea name="code3message" class="form-control " rows="2">{{ $settings->code3message }}</textarea>
                                       <small class="text-{{ $text }}">This message will be displayed to users on if code3 is on international transfer </small>
                                     </div>
-                                      
-                                    
-                                     
-                                    
-                                    
+                                    <div class="form-group col-md-4 mb-3">
+                                        <h5 class="">Turn On/Off Subscription Message</h5>
+                                        <div class="selectgroup">
+                                            <label class="selectgroup-item">
+                                                <input type="radio" name="subscribe_status" value="1" class="selectgroup-input"
+                                                    {{ $settings->subscribe_status == '1' ? 'checked' : '' }}>
+                                                <span class="selectgroup-button">On</span>
+                                            </label>
+                                            <label class="selectgroup-item">
+                                                <input type="radio" name="subscribe_status"
+                                                    {{ $settings->subscribe_status != '1' ? 'checked' : '' }} value="0"
+                                                    class="selectgroup-input">
+                                                <span class="selectgroup-button">Off</span>
+                                            </label>
+                                        </div>
+                                    </div>
                                      </div>
                                  <div class="row">
                                 <div class="form-group col-md-4 mb-3">

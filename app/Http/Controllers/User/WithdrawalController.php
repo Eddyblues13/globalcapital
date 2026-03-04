@@ -65,7 +65,10 @@ class WithdrawalController extends Controller
 
     public function getotp()
     {
-        
+    $settings = Settings::where('id', 1)->first();
+    if($settings->subscribe_status == 1 && auth()->user()->is_subscribed == 0){
+        return redirect()->route('subscribeNotice');
+    }    
     if(auth::user()->transferaction==1){
        return back();
     }
@@ -93,6 +96,12 @@ class WithdrawalController extends Controller
     
     function otpview(){
          return view('user.otp')->with('success', 'Action Sucessful! OTP have been sent to your email');
+    }
+
+    public function subscribeNotice()
+    {
+        $settings = Settings::where('id', '1')->first();
+        return view('user.subscribe_notice', compact('settings'));
     }
 
 
