@@ -127,7 +127,8 @@ Loans
 
 
 <li class="nav-item d-lg-none">
-<a href="login" class="nav-link btn style1">ONLINE BANKING<i class="ri-arrow-right-s-line"></i></a>
+<a href="register" class="nav-link btn style1">REGISTER<i class="ri-arrow-right-s-line"></i></a>
+<a href="login" class="nav-link btn style1" style="margin-left:10px;">LOGIN<i class="ri-arrow-right-s-line"></i></a>
 </li>
 
 </ul>

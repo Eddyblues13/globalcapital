@@ -17,7 +17,8 @@
     <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Transfer Money Across The World In Real time</h1>
     <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">{{$settings->site_name}} transformed the digital banking industry using data and technology more than ten years ago. We are now one of the largest digital banking providers, dedicated to innovating, simplifying, and humanizing banking.</p>
     <div class="hero-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-    <a href="login" class="btn style1">ONLINE BANKING<i class="ri-arrow-right-s-line"></i></a>
+    <a href="register" class="btn style1">REGISTER<i class="ri-arrow-right-s-line"></i></a>
+    <a href="login" class="btn style1" style="margin-left:10px;">LOGIN<i class="ri-arrow-right-s-line"></i></a>
     <a class="play-video" data-fancybox="" href="https://www.youtube.com/watch?v=oDDbVC3Hekc">
     <span class="play-now icon">
     <i class="ri-play-fill"></i>
